@@ -24,7 +24,7 @@ Nele você pode pesquisar, visualizar e explorar Pokémons com um visual moderno
 
 ## 🖼️ Preview
 
-![JocaDex Preview](https://ibb.co/JwhtMfZH)
+![JocaDex Preview](https://i.ibb.co/HfJ4kWZq/imagem-2025-06-08-223755655.png)
 
 ---
 
