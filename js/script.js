@@ -5,8 +5,8 @@ const pokemonList = document.getElementById("lista-pokemon")
 
 function converter(pokemon){
    
-    return `<li class="pokemon">
-                <p class="${pokemon}">${pokemon.name}</p>
+    return `<li class="pokemon ${pokemon.types[0].type.name}">
+                <p >${pokemon.name}</p>
                 <img src="${pokemon.sprites.other.dream_world.front_default}" alt="${pokemon.name}">
             </li>
             `

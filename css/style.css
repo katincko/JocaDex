@@ -1,19 +1,158 @@
 *{
     margin: 0%;
     padding: 0%;
+ 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+body{
+    background: linear-gradient(90deg, rgba(245, 35, 35, 0.514) 0%, #ffdc4f83 100%);
+    color: #222;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #ff0000 0%, #fff 100%);
+    padding: 10px 40px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.2);
+}
+
+
+.menu .logo {
+    height: 60px;
+    margin-right: 30px;
+}
+
+.menu h1 {
+    font-size: 2em;
+    color: #000000;
+    font-weight: bolder;
+    margin: 0;
+    background: linear-gradient(90deg, #ffcd0583 0%, #ffcd0583 100%);
+    border-radius: 7px;
+    padding: 10px 20px;
+}
+.menu h1 span {
+    background: linear-gradient(90deg, #ff0000c2 0%, #4b4949 100%);
+    background-clip: text;
+    color: transparent;
+}
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 8px 18px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.menu ul li a:hover {
+    background: #ffe066;
+    color: #d90429;
+
+}
+
+
+
+
+
+
+
+
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 30px;
+    padding: 6px 16px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.12);
+    gap: 8px;
+    border: 2px solid #ffe066;
+    transition: box-shadow 0.2s;
+}
+
+.search-container:focus-within {
+    box-shadow: 0 4px 16px 0 rgba(255,224,102,0.4);
+    border-color: #ffcb05;
+}
+
+.search-container input[type="text"] {
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: #f8f8f8;
+    transition: background 0.2s;
+    width: 180px;
+}
+
+.search-container input[type="text"]:focus {
+    background: #fffbe6;
+}
+
+.search-container button {
+    background: linear-gradient(90deg, #ffcb05 0%, #ffe066 100%);
+    color: #222;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.08);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.search-container button:hover {
+    background: #ffde59;
+    color: #d90429;
+    box-shadow: 0 2px 8px 0 rgba(255,224,102,0.3);
+}
+
+
 .container{
     margin: 40px;
     border: 2px solid black;
     border-radius: 15px;
     box-shadow: 0 2px 12px 0 rgba(0,0,0,0.5);
+    text-align: center;
+    background-color: #fcfcfc;
 }
+
 .lista-pokemon{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     margin: 20px;
     gap: 20px;
+    @media (max-width: 1420px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    @media (max-width: 540px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .pokemon{
@@ -26,9 +165,15 @@
     border-radius: 15px;
     background-color: greenyellow;
     box-shadow: 0 2px 12px 0 rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
 
     img{
         max-width: 80%;
+        max-height: 150px;
+        align-self: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding: 20px;
     }
 
     p{
@@ -36,4 +181,63 @@
         font-size: large;
         
     }
+}
+
+.pokemon:hover {
+    transform: scale(1.05);
+}
+
+.water {
+background-color: #6890f0;
+}
+.fire{
+    background-color: #f05030;
+}
+.grass{
+    background-color: #78c850;
+}
+.electric{
+    background-color: #f8d030;
+}
+.psychic{
+    background-color: #f85888;
+}
+.ice{
+    background-color: #98d8d8;
+}
+.dragon{
+    background-color: #7038f8;
+}
+.dark{
+    background-color: #705848;
+}
+.normal{
+    background-color: #a8a878;
+}
+.fighting{
+    background-color: #903028;
+}
+.flying{
+    background-color: #a890f0;
+}
+.poison{
+    background-color: #a040a0;
+}
+.ground{
+    background-color: #e0c068;
+}
+.rock{
+    background-color: #b8a038;
+}
+.bug{
+    background-color: #a8b820;
+}
+.ghost{
+    background-color: #705898;
+}
+.steel{
+    background-color: #b8b8d0;
+}
+.fairy{
+    background-color: pink;
 }
